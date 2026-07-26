@@ -13,6 +13,8 @@ export default function Hero() {
               max="100"
             ></progress>
 
+            {/* This is a dummy Text.. */}
+
             <p>Overall Score: 85/100</p>
 
             <div className="divider"></div>
