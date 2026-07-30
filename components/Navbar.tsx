@@ -1,38 +1,46 @@
+import Link from "next/link";
+
 export default function Navbar() {
   return (
-    <div className="navbar bg-base-100 shadow-md px-6">
-      {/* Logo */}
-      <div className="flex-1">
-        <a className="text-2xl font-bold text-primary cursor-pointer">
-          LinkedIn Analyzer
-        </a>
-      </div>
+    <nav className="sticky top-0 z-50 glass-nav px-8 py-4 flex justify-between items-center">
+      <Link
+        href="/"
+        className="text-xl font-bold text-indigo-400 tracking-wide cursor-pointer"
+      >
+        LinkedIn Analyzer
+      </Link>
 
-      {/* Navigation Menu + Buttons */}
-      <div className="flex-none flex items-center gap-4">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Home</a>
-          </li>
-          <li>
-            <a>Features</a>
-          </li>
-          <li>
-            <a>About</a>
-          </li>
-          <li>
-            <a>Contact</a>
-          </li>
-        </ul>
+      <div className="flex items-center gap-6 text-sm font-medium">
+        <Link href="/" className="hover:text-indigo-400 transition-colors">
+          Home
+        </Link>
 
-        <button className="btn btn-ghost">
+        <Link href="#features" className="hover:text-indigo-400 transition-colors">
+          Features
+        </Link>
+
+        <Link href="#about" className="hover:text-indigo-400 transition-colors">
+          About
+        </Link>
+
+        <Link href="#contact" className="hover:text-indigo-400 transition-colors">
+          Contact
+        </Link>
+
+        <Link
+          href="/login"
+          className="btn btn-ghost text-sm font-semibold hover:bg-white/10 text-slate-200"
+        >
           Login
-        </button>
+        </Link>
 
-        <button className="btn btn-primary">
+        <Link
+          href="/signup"
+          className="btn btn-primary bg-indigo-600 hover:bg-indigo-500 text-white border-none shadow-lg shadow-indigo-500/30 px-5"
+        >
           Get Started
-        </button>
+        </Link>
       </div>
-    </div>
+    </nav>
   );
 }
