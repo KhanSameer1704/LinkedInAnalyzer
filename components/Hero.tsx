@@ -2,21 +2,41 @@ import React from 'react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="max-w-6xl w-full mx-auto px-6 py-16 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center flex-1">
-      
-      {/* Left Column */}
-      <div className="space-y-6">
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
-          Analyze Your <br />
-          <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            LinkedIn Profile
-          </span>
-        </h1>
-        <p className="text-slate-400 text-lg max-w-md">
-          Get a detailed profile score, personalized recommendations, and actionable insights to improve your professional presence.
-        </p>
-        <div className="flex gap-4 pt-2">
-          <button className="btn btn-primary bg-indigo-600 hover:bg-indigo-500 text-white border-none shadow-lg shadow-indigo-500/25 px-6">
+    <section className="hero min-h-[80vh] bg-base-200">
+      <div className="hero-content flex-col lg:flex-row-reverse">
+
+        {/* Right Side */}
+        <div className="card w-96 bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">Profile Score</h2>
+            <progress
+              className="progress progress-primary w-full"
+              value="85"
+              max="100"
+            ></progress>
+
+            <p>Overall Score: 85/100</p>
+
+            <div className="divider"></div>
+
+            <p>✔ Strong Headline</p>
+            <p>✔ Good Skills</p>
+            <p>⚠ Improve About Section</p>
+          </div>
+        </div>
+
+        {/* Left Side */}
+        <div>
+          <h1 className="text-5xl font-bold">
+            Analyze Your LinkedIn Profile
+          </h1>
+
+          <p className="py-6 max-w-xl">
+            Get a detailed profile score, personalized recommendations,
+            and actionable insights to improve your professional presence.
+          </p>
+
+          <button className="btn btn-primary mr-4">
             Get Started
           </button>
           <button className="btn btn-outline border-white/20 text-white hover:bg-white/10 px-6">
